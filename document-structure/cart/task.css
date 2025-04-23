@@ -7,6 +7,20 @@ body {
   align-items: center;
 }
 
+.cart {
+  display: none;
+}
+
+.cart__product-remove {
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: pink;
+  color: black;
+  border: 1px dashed green;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
 .cart__product {
   position: relative;
 }
