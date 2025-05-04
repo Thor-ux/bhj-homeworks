@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tooltipElement.textContent = title;
     tooltipElement.classList.add('tooltip_active');
 
-    // Position the tooltip
+    // Position
     const rect = tooltip.getBoundingClientRect();
     const tooltipRect = tooltipElement.getBoundingClientRect();
 
