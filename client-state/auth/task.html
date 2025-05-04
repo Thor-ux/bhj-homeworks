@@ -22,7 +22,7 @@
         <div class="card">
             <div class="signin signin_active" id="signin">
                 <h2 class="title">Вход</h2>
-                <form action="https://students.netoservices.ru/nestjs-backend/auth" id="signin__form">
+                <form action="https: //students.netoservices.ru/nestjs-backend/auth" id="signin__form">
                     <div class="row">
                         <input type="text" name="login" class="control" placeholder="Логин">
                     </div>
@@ -34,11 +34,12 @@
                     </div>
                 </form>
             </div>
-            <div class="welcome" id="welcome">
-                Добро пожаловать, пользователь #<span id="user_id"></span>
+            <div class="welcome welcome_active" id="welcome">
+                <p>Добро пожаловать,  пользователь #<span id="user_id"></span></p>
+                <button class="btn" id="logout__btn">Выйти</button>
             </div>
         </div>
-        </main>
+    </main>
     <script src="task.js"></script>
 </body>
 </html>
