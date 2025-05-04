@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const tasksForm = document.getElementById('tasks__form');
     const tasksList = document.getElementById('tasks__list');
 
-    // Task
     function createTask(taskText) {
         const taskElement = document.createElement('div');
         taskElement.className = 'task';
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="#" class="task__remove">&times;</a>
         `;
 
-        // remove
         const removeButton = taskElement.querySelector('.task__remove');
         removeButton.addEventListener('click', (e) => {
             e.preventDefault();
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return taskElement;
     }
 
-    // Task listen
     tasksForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const taskText = taskInput.value.trim();
@@ -32,14 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const newTask = createTask(taskText);
             tasksList.appendChild(newTask);
             taskInput.value = '';
-        }
-    });
-
-    // New input after Enter 
-    taskInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            tasksForm.dispatchEvent(new Event('submit'));
         }
     });
 });
