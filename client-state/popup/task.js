@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('subscribe-modal');
     const closeButton = modal.querySelector('.modal__close');
 
-    // Функция для установки cookie
+    
     function setCookie(name, value, days) {
         let expires = "";
         if (days) {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
-    // Функция для получения значения cookie
+    
     function getCookie(name) {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -25,14 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
         return null;
     }
 
-    // Проверяем, было ли окно закрыто ранее
+    
     if (!getCookie('modalClosed')) {
         modal.classList.add('modal_active');
     }
 
-    // Обработчик события для закрытия окна
+    
     closeButton.addEventListener('click', function() {
         modal.classList.remove('modal_active');
-        setCookie('modalClosed', 'true', 365); // Устанавливаем cookie на 1 год
+        setCookie('modalClosed', 'true', 365); 
     });
 });
